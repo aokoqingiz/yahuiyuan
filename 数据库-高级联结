@@ -1,0 +1,12 @@
+给表起别名，可以在重复用到某个表时避免二义性。例如自联结：
+select c1.id, c1.name,c1.content
+from customer as c1, customer as c2
+where c1.name = c2.name
+and c1.content = 'jim';
+
+表内部的操作：插入insert，更新update，删除delete
+
+表table操作：创建create，alter，删除drop
+
+视图view：查询的结果，不含有数据，慢。
+视图是一种封装select语句的层次。
